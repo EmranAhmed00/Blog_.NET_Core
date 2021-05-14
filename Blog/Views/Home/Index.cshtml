@@ -1,0 +1,14 @@
+﻿@model List<Blog.Models.BlogPost>
+
+
+@foreach (var postedblog in Model)
+{
+
+    <h3> @postedblog.Heading</h3>
+    
+    <p> @postedblog.Text</p>
+
+    <p> @postedblog.Date</p>
+
+   
+}

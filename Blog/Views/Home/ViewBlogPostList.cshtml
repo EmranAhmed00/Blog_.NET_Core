@@ -1,0 +1,31 @@
+﻿
+@model Blog.ViewModels.ViewModelPosts
+
+<form asp-controller="Home" asp-action="ViewBlogPostList" method="post" id="search">
+    <label></label>
+    <input type="text" asp-for="@Model.SearchValue" />
+    <input type="submit" value="Search" />
+
+
+    <select asp-for="@Model.currentPost.CategoryId">
+        @foreach (var category in Model.categories)
+        {
+
+            <option value="@category.CategoryId">@category.CategoryName</option>
+
+        }
+    </select>
+</form>
+
+<div>
+
+
+    @foreach (var ser in Model.blogPosts)
+    {
+        <a asp-controller="Home" asp-action="ViewBlogPost" asp-route-id="@ser.PostId">@ser.Heading</a>
+
+     <p>@ser.Date</p>
+       
+    }
+
+</div>

@@ -1,0 +1,31 @@
+﻿@model Blog.ViewModels.ViewModelPosts
+
+<form asp-controller="Home" asp-action="Create" method="post" id="create">
+    <div class="row">
+        <p>Create New Blog:</p>
+      
+        <label asp-for="categories"></label>
+        <select asp-for="@Model.currentPost.CategoryId">
+            @foreach (var cat in Model.categories)
+            {
+                <option value="@cat.CategoryId">@cat.CategoryName</option>
+            }
+
+        </select>
+    </div>
+    <br /> <br /> <br />
+
+    <label asp-for="@Model.currentPost.Heading"></label>
+    <br />
+    <input asp-for="@Model.currentPost.Heading" maxlength="50" />
+    <span asp-validation-for="@Model.currentPost.Heading"></span>
+    <br /><br />
+    <label asp-for="@Model.currentPost.Text"></label>
+    <br />
+    <textarea rows="4" cols="50" asp-for="@Model.currentPost.Text" maxlength="2000"></textarea>
+    <span asp-validation-for="@Model.currentPost.Text"></span>
+    <br />
+
+    <input type="submit" value="save" />
+</form>
+

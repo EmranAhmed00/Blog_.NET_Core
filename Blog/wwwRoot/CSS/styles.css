@@ -1,0 +1,56 @@
+﻿
+
+#create {
+    background-color: floralwhite;
+    width: 720px;
+    border: 5px solid dashed;
+    margin: auto;
+    font-size: 18px;
+    color: blueviolet;
+    float: none;
+    content: "  ";
+}
+
+
+
+    /*#search {
+    margin:auto;
+    width:500px;
+}*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:darkturquoise;
+    color:darkviolet;
+}
+
+nav li {
+    float: left;
+}
+
+    nav li a {
+        display: inline-block;
+        color: blueviolet;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+/*#main {
+    height: 70%;
+}*/
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color:darkturquoise ;
+    width: 100%;
+   
+}
+
+
+

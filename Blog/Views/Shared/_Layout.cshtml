@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/CSS/styles.css" rel="stylesheet" />
+
+    <script src="~/JS/lettercount.js" defer></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" >
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div id="nav">
+
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Create">Create New Blog</a></li>
+                @*<li><a asp-controller="Home" asp-action="Index">View Posted Blog </a></li>*@
+                <li><a asp-controller="Home" asp-action="ViewBlogPostList"> Search Blog</a></li>
+            </ul>
+        </nav>
+        @RenderBody()
+    </div>
+
+
+    <footer>
+        <p>
+           Blog Support Centre:
+            +46771550720
+            Call us, we are available Monday to Friday, 9:00 - 16:00 CET
+        </p>
+
+    </footer>
+
+</body>
+</html>
+
+
